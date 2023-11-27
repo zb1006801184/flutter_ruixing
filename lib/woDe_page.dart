@@ -65,7 +65,8 @@ class _WodePageState extends State<WodePage> {
 
   Widget personWidget() {
     return Container(
-      padding: EdgeInsetsDirectional.symmetric(horizontal: 20),
+      // padding: EdgeInsetsDirectional.symmetric(horizontal: 20),
+      padding: EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/wode/wodetopBackground.jpg'),

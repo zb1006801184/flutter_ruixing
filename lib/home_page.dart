@@ -24,15 +24,16 @@ class _RXHomePagState extends State<RXHomePag> {
     return Scaffold(
       body: Column(
         children: [
-          MyCarousel(context),
+          myCarousel(),
         ],
       ),
     );
   }
 
-  Widget MyCarousel(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
+  Widget myCarousel() {
+    // double screenWidth = MediaQuery.of(context).size.width;
     return Stack(
+      alignment:AlignmentDirectional.center,
       children: [
         CarouselSlider.builder(
           itemCount: images.length, 
@@ -62,9 +63,9 @@ class _RXHomePagState extends State<RXHomePag> {
         ), 
         Positioned(
           bottom: 10,
-          left: (screenWidth - 8 * images.length - 10 * (images.length - 1))/2,
+          // left: (screenWidth - 8 * images.length - 10 * (images.length - 1))/2,
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(
               images.length, 
               (index) => buildDot(index)),
