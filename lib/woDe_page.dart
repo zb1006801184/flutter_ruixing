@@ -13,57 +13,52 @@ class _WodePageState extends State<WodePage> {
   @override
   Widget build(BuildContext context) {
     // 获取屏幕宽度
-    double screenWidth = MediaQuery.of(context).size.width;
+    // double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Color.fromARGB(238, 238, 242, 248),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            ///1. 用户信息widget
-            personWidget(),
-            OureListWidget(
-                leftImageNameStr: 'assets/wode/info.png',
-                titleStr: '个人资料',
-                rightImageNameStr: 'assets/wode/listArrow.png'),
-            OureListWidget(
-                leftImageNameStr: 'assets/wode/wallet.png',
-                titleStr: '咖啡钱包',
-                rightImageNameStr: 'assets/wode/listArrow.png'),
-            OureListWidget(
-                leftImageNameStr: 'assets/wode/coupon.png',
-                titleStr: '优惠券',
-                rightImageNameStr: 'assets/wode/listArrow.png'),
-            OureListWidget(
-                leftImageNameStr: 'assets/wode/redeemoffer.png',
-                titleStr: '兑换优惠',
-                rightImageNameStr: 'assets/wode/listArrow.png'),
-            OureListWidget(
-                leftImageNameStr: 'assets/wode/bill.png',
-                titleStr: '发票管理',
-                rightImageNameStr: 'assets/wode/listArrow.png'),
-            SizedBox(height: 10),
-            OureListWidget(
-                leftImageNameStr: 'assets/wode/help.png',
-                titleStr: '帮助反馈',
-                rightImageNameStr: 'assets/wode/listArrow.png'),
-            // Expanded(
-            //     child: Container(
-            //   color: Color.fromARGB(238, 238, 242, 248),
-            //   child: Center(
-            //       child: Text('M',
-            //           style: TextStyle(
-            //             color: Color.fromARGB(238, 238, 242, 248),
-            //           ))),
-            // )),
-            SizedBox(height: 8),
-            Container(
-              width: double.infinity,
-              padding: EdgeInsetsDirectional.symmetric(horizontal: 20),
+      body: Column(
+        children: [
+          Expanded(
+            child: SingleChildScrollView(
+            child: Column(
+              children: [
+                ///1. 用户信息widget
+                personWidget(),
+                  OureListWidget(
+                      leftImageNameStr: 'assets/wode/info.png',
+                      titleStr: '个人资料',
+                      rightImageNameStr: 'assets/wode/listArrow.png'),
+                  OureListWidget(
+                      leftImageNameStr: 'assets/wode/wallet.png',
+                      titleStr: '咖啡钱包',
+                      rightImageNameStr: 'assets/wode/listArrow.png'),
+                  OureListWidget(
+                      leftImageNameStr: 'assets/wode/coupon.png',
+                      titleStr: '优惠券',
+                      rightImageNameStr: 'assets/wode/listArrow.png'),
+                  OureListWidget(
+                      leftImageNameStr: 'assets/wode/redeemoffer.png',
+                      titleStr: '兑换优惠',
+                      rightImageNameStr: 'assets/wode/listArrow.png'),
+                  OureListWidget(
+                      leftImageNameStr: 'assets/wode/bill.png',
+                      titleStr: '发票管理',
+                      rightImageNameStr: 'assets/wode/listArrow.png'),
+                  SizedBox(height: 10),
+                  OureListWidget(
+                      leftImageNameStr: 'assets/wode/help.png',
+                      titleStr: '帮助反馈',
+                      rightImageNameStr: 'assets/wode/listArrow.png'),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(
               child: Image.asset('assets/wode/bottomIcon.jpg'),
-            )
-          ],
-        ),
-      ),
+          ),
+          SizedBox(height: 10),
+        ],
+      )
     );
   }
 
@@ -73,8 +68,8 @@ class _WodePageState extends State<WodePage> {
       padding: EdgeInsetsDirectional.symmetric(horizontal: 20),
       decoration: BoxDecoration(
           image: DecorationImage(
-        image: AssetImage('assets/wode/wodetopBackground.jpg'),
-        fit: BoxFit.fill,
+            image: AssetImage('assets/wode/wodetopBackground.jpg'),
+            fit: BoxFit.fill,
       )),
       child: SafeArea(
         bottom: false,

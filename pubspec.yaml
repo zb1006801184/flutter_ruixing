@@ -38,6 +38,8 @@ dependencies:
 
   get: ^4.6.1
 
+  carousel_slider: ^4.0.0
+
   get_storage: ^2.0.2
 
 dev_dependencies:
@@ -88,6 +90,10 @@ flutter:
     - assets/wode/info.png
     - assets/wode/coupon.png
     - assets/wode/bottomIcon.jpg
+
+    - assets/shouye/shouyeLB1.jpg
+    - assets/shouye/shouyeLB2.jpg
+    - assets/shouye/shouyeLB3.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

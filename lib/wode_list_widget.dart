@@ -13,72 +13,42 @@ class OureListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-    return Container(
-      height: 51,
-      color: Colors.white,
-      padding: EdgeInsets.only(left: 15, right: 20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Row(
+    // double screenWidth = MediaQuery.of(context).size.width;
+    return Column(
+      children: [
+        Container(
+          height: 50,
+          color: Colors.white,
+          padding: EdgeInsets.only(left: 15, right: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Image.asset(
-                leftImageNameStr,
-                width: 20,
-                height: 20,
+              Row(
+                children: [
+                  Image.asset(
+                    leftImageNameStr,
+                    width: 20,
+                    height: 20,
+                  ),
+                  SizedBox(width: 5),
+                  Text(
+                    titleStr,
+                    style: TextStyle(fontSize: 14.0, color: Colors.black87),
+                  ),
+                ],
               ),
-              SizedBox(width: 5),
-              Text(
-                titleStr,
-                style: TextStyle(fontSize: 14.0, color: Colors.black87),
+              Image.asset(
+                rightImageNameStr,
+                width: 14,
+                height: 14,
               ),
             ],
           ),
-          Image.asset(
-            rightImageNameStr,
-            width: 14,
-            height: 14,
-          ),
-        ],
-      ),
-    );
-
-    return Stack(
-      children: [
-        Positioned(
-          left: 15,
-          top: 15,
-          child: Image.asset(
-            leftImageNameStr,
-            width: 20,
-            height: 20,
-          ),
         ),
-        Positioned(
-          left: 50,
-          top: 15,
-          child: Text(
-            titleStr,
-            style: TextStyle(fontSize: 14.0, color: Colors.black87),
-          ),
-        ),
-        Positioned(
-          left: screenWidth - 33,
-          top: 18,
-          child: Image.asset(
-            rightImageNameStr,
-            width: 14,
-            height: 14,
-          ),
-        ),
-        Positioned(
-          left: 0,
-          top: 50,
-          child: CustomPaint(
-            painter: LinePainter(),
-          ),
-        ),
+        Container(
+          height: 1,
+          color: Color.fromARGB(238, 238, 242, 248),
+        )
       ],
     );
   }
